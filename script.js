@@ -16,13 +16,13 @@ function writePassword() {
     if (getPasswordLength >= 8 && getPasswordLength <= 128) {   //string?? min-8 max-128
         
         // Confirm criteria 
-        var finalPassword = confirm("Would you like to include an UPPERCASE?") ? yesUpperEl : '';
+        var finalPassword  confirm("Would you like to include an UPPERCASE?") ? yesUpperEl : '',
             
-            finalPassword =  confirm("Would you like to include a lowercase?") ? finalPassword + yesLowerEl : finalPassword;
+        var finalPassword = confirm("Would you like to include a lowercase?") ? finalPassword + yesLowerEl : finalPassword,
             
-            finalPassword = confirm("Would you like to include Numbers(0-9)?") ? finalPassword + yesNumberEl : finalPassword;
+        var finalPassword = confirm("Would you like to include Numbers(0-9)?") ? finalPassword.value + yesNumberEl : finalPassword,
             
-            finalPassword =  confirm("Would you like to include some Special Characters?") ? finalPassword + yesSymbolEl : finalPasswords;
+        var finalPassword = confirm("Would you like to include some Special Characters?") ? finalPassword.value + yesSymbolEl : finalPasswords
         
         
         console.log (finalPassword.value);
