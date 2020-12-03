@@ -17,22 +17,21 @@ function writePassword() {
         
         // Confirm criteria 
         var finalPassword = confirm("Would you like to include an UPPERCASE?") ? yesUpperEl : '';
-            
-            finalPassword =  confirm("Would you like to include a lowercase?") ? finalPassword + yesLowerEl : finalPassword;
-            
+            //console.log(finalPassword.value);
+            finalPassword = confirm("Would you like to include a lowercase?") ? finalPassword + yesLowerEl : finalPassword;
+            //console.log (finalPassword.value);
             finalPassword = confirm("Would you like to include Numbers(0-9)?") ? finalPassword + yesNumberEl : finalPassword;
-            
-            finalPassword =  confirm("Would you like to include some Special Characters?") ? finalPassword + yesSymbolEl : finalPasswords;
-        
-        
-        console.log (finalPassword.value);
+            //console.log (finalPassword.value);
+            finalPassword = confirm("Would you like to include some Special Characters?") ? finalPassword + yesSymbolEl : finalPassword;
+            //console.log (finalPassword.value);
+    
            
         if (finalPassword) {
            function generatePassword() {
-                var password = '';
+                let password = '';
 
                 for(var i = 0; i < getPasswordLength; i++) {
-                    password = password + (finalPassword.charAt(Math.floor(Math.random() * finalPassword.lenght)));
+                    password = password + finalPassword.charAt(Math.floor(Math.random() * finalPassword.length));
                 };
 
                 return password;
@@ -43,6 +42,7 @@ function writePassword() {
             var passwordText = document.querySelector("#password");
     
             passwordText.value = password;
+            //console.log(password.value);
         }
         
         else {
@@ -51,7 +51,7 @@ function writePassword() {
     }
 
     else {
-        alert("Passwords are minimum 8 digits, Please try again");
+        alert("Passwords are minimum 8 digits but not over 128. Please try again");
     };
     
 }
