@@ -11,11 +11,11 @@ This project requires an application that be used to generate random valued and 
 
 
 ### Output
-![Password Generator](https://criscel.github.io/Password-Generator/)
+[Password Generator Page](https://criscel.github.io/Password-Generator/)
 
 ![User Interface](Assets/ui.png)
 ![Length_Selection](Assets/lenght.png) 
-![Uppercase Criteria](Assets/Uppercases.png)
+![Uppercase Criteria](Assets/Uppercase.png)
 ![Lowercase Criteria](Assets/Lowercase.png)
 ![Numbers Criteria](Assets/numbers.png)
 ![Special_Characters](Assets/special.png)
